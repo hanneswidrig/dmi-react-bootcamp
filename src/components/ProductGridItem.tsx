@@ -6,8 +6,8 @@ export interface ProductGridItemProps {
 
 export function ProductGridItem({ product }: ProductGridItemProps) {
 	return (
-		<div className="flex rounded-lg bg-gray-100">
-			<div className="p-4">{product.name}</div>
+		<div className="flex cursor-pointer rounded bg-gray-100 transition-colors hover:bg-gray-200 hover:shadow">
+			<div className="select-none p-4">{product.name}</div>
 		</div>
 	);
 }

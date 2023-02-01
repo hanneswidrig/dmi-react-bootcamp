@@ -3,6 +3,9 @@ import { ProductGridItem } from "./ProductGridItem";
 export interface Product {
 	id: number;
 	name: string;
+	price: string;
+	imgSrc: string;
+	description: string;
 }
 
 export interface ProductGridProps {
