@@ -5,11 +5,19 @@ export function Header() {
 		<header className="flex flex-col items-center">
 			<div className="flex w-full items-center justify-between">
 				<Link to="/" className="text-xl font-semibold">
-					DMI Donuts
+					DMI Cafe
 				</Link>
 				<div>Cart</div>
 			</div>
 			<ul className="flex gap-4 font-medium">
+				<li>
+					<Link
+						to="/"
+						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100"
+					>
+						Featured
+					</Link>
+				</li>
 				<li>
 					<Link
 						to="/browse/coffee"
