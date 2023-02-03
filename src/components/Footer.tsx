@@ -4,7 +4,7 @@ export function Footer() {
 	return (
 		<footer className="flex items-center justify-between">
 			<span className="text-sm text-gray-500">
-				<div>© 2023 DMI Swag Shop™. All Rights Reserved.</div>
+				<div>© 2023 DMI Cafe™. All Rights Reserved.</div>
 			</span>
 			<ul className="mt-3 flex flex-wrap items-center text-sm text-gray-500">
 				<li>
