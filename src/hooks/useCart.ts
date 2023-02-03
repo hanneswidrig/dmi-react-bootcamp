@@ -9,7 +9,7 @@ export type CartItem = {
 
 export function useCart() {
 	return useOutletContext<{
-		cart: Map<string, CartItem[]>;
+		cart: CartItem[];
 		setCart: Dispatch<SetStateAction<CartItem[]>>;
 	}>();
 }

@@ -17,8 +17,7 @@ export function Header(props: HeaderProps) {
 				</Link>
 				<button
 					className="flex rounded-md bg-red-50 px-6 py-2 text-red-700 transition-shadow active:bg-red-100"
-					onClick={() => navigate("/cart")}
-				>
+					onClick={() => navigate("/cart")}>
 					<div className="mr-1 text-2xl font-semibold">{props.cart.length}</div>
 					<CartIcon className="h-8 w-8" />
 				</button>
@@ -27,48 +26,42 @@ export function Header(props: HeaderProps) {
 				<li>
 					<Link
 						to="/"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100"
-					>
+						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100">
 						Featured
 					</Link>
 				</li>
 				<li>
 					<Link
 						to="/browse/coffee"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100"
-					>
+						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100">
 						Coffee
 					</Link>
 				</li>
 				<li>
 					<Link
 						to="/browse/donuts"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100"
-					>
+						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100">
 						Donuts
 					</Link>
 				</li>
 				<li>
 					<Link
 						to="/browse/bagels"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100"
-					>
+						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100">
 						Bagels
 					</Link>
 				</li>
 				<li>
 					<Link
 						to="/browse/muffins"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100"
-					>
+						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100">
 						Muffins
 					</Link>
 				</li>
 				<li>
 					<Link
 						to="/browse/sandwiches"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100"
-					>
+						className="cursor-pointer rounded-md px-6 py-2 hover:bg-red-50 hover:text-red-700 active:bg-red-100">
 						Sandwiches
 					</Link>
 				</li>
