@@ -11,7 +11,7 @@ export function ProductGridItem({ product }: ProductGridItemProps) {
 	return (
 		<div
 			className="flex cursor-pointer flex-col rounded bg-stone-100 transition-colors hover:bg-stone-300 hover:shadow"
-			onClick={() => navigate(`/menu/${product.productId}`)}
+			onClick={() => navigate(`/menu/${product.id}`)}
 		>
 			<div className="flex justify-between">
 				<div className="select-none p-4 font-semibold">{product.name}</div>

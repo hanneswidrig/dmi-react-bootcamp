@@ -1,13 +1,29 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-export function Header() {
+import { CartItem } from "../Root";
+import { ReactComponent as CartIcon } from "../assets/cart.svg";
+
+interface HeaderProps {
+	cart: CartItem[];
+}
+
+export function Header(props: HeaderProps) {
+	const navigate = useNavigate();
+
 	return (
 		<header className="flex flex-col items-center">
 			<div className="flex w-full items-center justify-between">
 				<Link to="/" className="text-xl font-semibold">
 					DMI Cafe
 				</Link>
-				<div>Cart</div>
+				<button
+					className="flex rounded-md bg-red-50 px-6 py-2 text-red-700 transition-shadow active:bg-red-100"
+					onClick={() => navigate("/cart")}
+				>
+					<div className="mr-1 text-2xl font-semibold">{props.cart.length}</div>
+					<CartIcon className="h-8 w-8" />
+				</button>
 			</div>
 			<ul className="flex gap-4 font-medium">
 				<li>

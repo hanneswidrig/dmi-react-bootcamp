@@ -6,6 +6,7 @@ import "./index.css";
 
 import { Root } from "./Root";
 import { Home } from "./pages/Home";
+import { Cart } from "./pages/Cart";
 import { Browse } from "./pages/Browse";
 import { ProductDetail } from "./pages/ProductDetail";
 
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
 		element: <Root />,
 		children: [
 			{ path: "", element: <Home /> },
+			{ path: "cart", element: <Cart /> },
 			{ path: "browse/:type", element: <Browse /> },
 			{ path: "menu/:productId", element: <ProductDetail /> },
 		],

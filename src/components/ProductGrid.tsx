@@ -11,7 +11,7 @@ export function ProductGrid(props: ProductGridProps) {
 	return (
 		<div className="my-8 grid grid-cols-3 gap-4">
 			{products.map((product) => (
-				<ProductGridItem key={product.productId} product={product} />
+				<ProductGridItem key={product.id} product={product} />
 			))}
 		</div>
 	);
