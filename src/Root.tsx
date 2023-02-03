@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
-import { CartItem } from "./useCart";
+import { CartItem } from "./hooks/useCart";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 

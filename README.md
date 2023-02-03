@@ -4,7 +4,7 @@ React based Cafe E-Commerce App created by Hannes Widrig
 
 ## Tech Stack
 
-- React 18
-- TypeScript
-- Tailwind CSS
-- Vite
+-   React 18
+-   TypeScript
+-   Tailwind CSS
+-   Vite

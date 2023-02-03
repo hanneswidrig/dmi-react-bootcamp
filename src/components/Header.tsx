@@ -1,7 +1,6 @@
-import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import { CartItem } from "../Root";
+import { CartItem } from "../hooks/useCart";
 import { ReactComponent as CartIcon } from "../assets/cart.svg";
 
 interface HeaderProps {
@@ -10,7 +9,6 @@ interface HeaderProps {
 
 export function Header(props: HeaderProps) {
 	const navigate = useNavigate();
-
 	return (
 		<header className="flex flex-col items-center">
 			<div className="flex w-full items-center justify-between">

@@ -11,11 +11,11 @@ export function ProductGridItem({ product }: ProductGridItemProps) {
 	return (
 		<div
 			className="flex cursor-pointer flex-col rounded bg-stone-100 transition-colors hover:bg-stone-300 hover:shadow"
-			onClick={() => navigate(`/menu/${product.id}`)}
+			onClick={() => navigate(`/menu/${product.productKey}`)}
 		>
 			<div className="flex justify-between">
 				<div className="select-none p-4 font-semibold">{product.name}</div>
-				<div className="select-none p-4 font-bold">{product.price}</div>
+				<div className="select-none p-4 font-bold">${product.price}</div>
 			</div>
 			<img src={product.imgSrc} alt="product image" />
 		</div>
