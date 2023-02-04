@@ -10,16 +10,16 @@ function Item({ groupedItem }: { groupedItem: [productKey: string, items: CartIt
 	const matchedItem = productList.find((product) => product.productKey === productKey);
 	if (matchedItem) {
 		return (
-			<div className="flex w-full justify-between rounded-md bg-red-50 text-red-700">
+			<div className="flex w-full justify-between rounded-md border-2 border-blue-100 bg-gray-50 text-gray-800">
 				<div className="m-4 flex w-full justify-between gap-4">
 					<div className="flex gap-4">
-						<img src={matchedItem.imgSrc} alt="product image" className="h-32 w-32 rounded-full" />
-						<h1 className="text-3xl font-semibold">{matchedItem.name}</h1>
+						<img src={matchedItem.imgSrc} alt="product image" className="h-24 w-24 rounded-full" />
+						<h1 className="text-2xl font-semibold">{matchedItem.name}</h1>
 					</div>
 					<div className="flex flex-col items-end justify-between">
-						<h1 className="text-xl font-semibold">${totalCost}</h1>
+						<h1 className="text-lg font-semibold">${totalCost}</h1>
 						<div className="flex gap-2">
-							<span className="px-2 py-1 text-sm font-medium text-black">Qty: {items.length}</span>
+							<span className="px-2 py-1 text-sm font-medium text-gray-800">Qty: {items.length}</span>
 							<button className="cursor-pointer select-none rounded-md bg-green-700 px-2 py-1 text-sm font-medium text-white shadow active:bg-green-800">
 								Add
 							</button>

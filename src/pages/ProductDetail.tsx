@@ -19,7 +19,7 @@ function AddToCart({ product }: { product: Product }) {
 
 	return (
 		<button
-			className="rounded-md bg-red-50 px-6 py-3 font-semibold text-red-700 active:bg-red-100"
+			className="rounded-md bg-blue-100 px-6 py-3 font-semibold text-blue-700 active:bg-blue-200"
 			onClick={() => addToCart(product)}>
 			Add to Cart
 		</button>
@@ -36,7 +36,7 @@ export function ProductDetail() {
 				<img src={matchedProduct.imgSrc} alt="product image" className="h-96 w-96 rounded-full" />
 				<div className="my-8 flex flex-col">
 					<h1 className="text-3xl font-bold">{matchedProduct.name}</h1>
-					<h2 className="text-xl font-semibold">{matchedProduct.price}</h2>
+					<h2 className="text-xl font-semibold">${matchedProduct.price}</h2>
 				</div>
 				<AddToCart product={matchedProduct} />
 			</div>
