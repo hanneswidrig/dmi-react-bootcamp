@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
-import { CartItem } from "./hooks/useCart";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import type { CartItem } from "./hooks/useCart";
 
 export function Root() {
 	const [cart, setCart] = useState<CartItem[]>([]);

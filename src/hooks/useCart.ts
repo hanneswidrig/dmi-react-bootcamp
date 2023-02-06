@@ -1,5 +1,5 @@
-import { Dispatch, SetStateAction } from "react";
 import { useOutletContext } from "react-router-dom";
+import type { Dispatch, SetStateAction } from "react";
 
 export type CartItem = {
 	id: string;

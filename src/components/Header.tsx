@@ -10,7 +10,7 @@ interface HeaderProps {
 export function Header(props: HeaderProps) {
 	const navigate = useNavigate();
 	return (
-		<header className="flex flex-col items-center">
+		<header className="flex flex-col items-center gap-4">
 			<div className="flex w-full items-center justify-between">
 				<Link to="/" className="text-xl font-semibold">
 					DMI Cafe
@@ -23,7 +23,7 @@ export function Header(props: HeaderProps) {
 					<CartIcon className="h-6 w-6" />
 				</button>
 			</div>
-			<ul className="flex gap-4 font-medium">
+			<ul className="flex flex-col gap-4 font-medium lg:flex-row">
 				<li>
 					<Link
 						to="/"

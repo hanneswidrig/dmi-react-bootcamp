@@ -10,8 +10,8 @@ function AddToCart({ product }: { product: Product }) {
 	function addToCart(product: Product) {
 		const nextItem = {
 			id: v4(),
-			productKey: product.productKey,
 			price: parseFloat(product.price),
+			productKey: product.productKey,
 		};
 
 		setCart((prevItems) => [...prevItems, nextItem]);
