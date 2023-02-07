@@ -19,7 +19,7 @@ interface HeaderProps {
 
 export function Header(props: HeaderProps) {
 	const navigate = useNavigate();
-	const navItems = navigationItems.map((navItem) => <NavItem navItem={navItem} />);
+	const navItems = navigationItems.map((navItem) => <NavItem key={navItem.to} navItem={navItem} />);
 	return (
 		<header className="flex flex-col items-center gap-4">
 			<div className="flex w-full items-center justify-between">
