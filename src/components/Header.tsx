@@ -28,7 +28,7 @@ export function Header(props: HeaderProps) {
 				</Link>
 				<button
 					type="button"
-					className="inline-flex items-center rounded-md border-2 border-blue-100 bg-blue-50 px-6 py-1 text-blue-700 transition-shadow active:bg-blue-100"
+					className="inline-flex items-center rounded-md bg-blue-100 px-6 py-1 text-blue-700 transition-shadow"
 					onClick={() => navigate("/cart")}>
 					<span className="mr-1 text-2xl font-semibold">{props.cart.length}</span>
 					<CartIcon className="h-6 w-6" />

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export type NavigationItem = {
 	to: string;
@@ -13,11 +13,11 @@ export function NavItem(props: NavItemProps) {
 	const { navItem } = props;
 	return (
 		<li>
-			<Link
+			<NavLink
 				to={navItem.to}
-				className="cursor-pointer rounded-md px-6 py-2 hover:bg-blue-100 hover:text-blue-700 active:bg-blue-100">
+				className="cursor-pointer rounded-md px-6 py-2 hover:bg-blue-100 aria-[current=page]:bg-blue-100 aria-[current=page]:text-blue-700">
 				{navItem.label}
-			</Link>
+			</NavLink>
 		</li>
 	);
 }
