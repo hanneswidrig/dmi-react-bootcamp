@@ -1,7 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
 
 import type { CartItem } from "../hooks/useCart";
+import { NavItem, type NavigationItem } from "./NavItem";
 import { ReactComponent as CartIcon } from "../assets/cart.svg";
+
+const navigationItems: NavigationItem[] = [
+	{ to: "/", label: "Featured" },
+	{ to: "/browse/coffee", label: "Coffee" },
+	{ to: "/browse/donuts", label: "Donuts" },
+	{ to: "/browse/bagels", label: "Bagels" },
+	{ to: "/browse/muffins", label: "Muffins" },
+	{ to: "/browse/sandwiches", label: "Sandwiches" },
+];
 
 interface HeaderProps {
 	cart: CartItem[];
@@ -9,6 +19,7 @@ interface HeaderProps {
 
 export function Header(props: HeaderProps) {
 	const navigate = useNavigate();
+	const navItems = navigationItems.map((navItem) => <NavItem navItem={navItem} />);
 	return (
 		<header className="flex flex-col items-center gap-4">
 			<div className="flex w-full items-center justify-between">
@@ -23,50 +34,7 @@ export function Header(props: HeaderProps) {
 					<CartIcon className="h-6 w-6" />
 				</button>
 			</div>
-			<ul className="flex flex-col gap-4 font-medium lg:flex-row">
-				<li>
-					<Link
-						to="/"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-blue-100 hover:text-blue-700 active:bg-blue-100">
-						Featured
-					</Link>
-				</li>
-				<li>
-					<Link
-						to="/browse/coffee"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-blue-100 hover:text-blue-700 active:bg-blue-100">
-						Coffee
-					</Link>
-				</li>
-				<li>
-					<Link
-						to="/browse/donuts"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-blue-100 hover:text-blue-700 active:bg-blue-100">
-						Donuts
-					</Link>
-				</li>
-				<li>
-					<Link
-						to="/browse/bagels"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-blue-100 hover:text-blue-700 active:bg-blue-100">
-						Bagels
-					</Link>
-				</li>
-				<li>
-					<Link
-						to="/browse/muffins"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-blue-100 hover:text-blue-700 active:bg-blue-100">
-						Muffins
-					</Link>
-				</li>
-				<li>
-					<Link
-						to="/browse/sandwiches"
-						className="cursor-pointer rounded-md px-6 py-2 hover:bg-blue-100 hover:text-blue-700 active:bg-blue-100">
-						Sandwiches
-					</Link>
-				</li>
-			</ul>
+			<ul className="flex flex-col gap-4 font-medium lg:flex-row">{...navItems}</ul>
 		</header>
 	);
 }
